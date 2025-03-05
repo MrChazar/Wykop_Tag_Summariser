@@ -3,9 +3,9 @@ import services.WykopHandler as wh
 from google import genai
 from google.genai import types
 
-api = WykopAPI("w55988974f3d3194b7dd98c7ab2c6765c2", "05f093e009943e9e9b911f2a8a9f1a00")
+api = WykopAPI("public_key", "private_key")
 api.authenticate()
-client = genai.Client(api_key="AIzaSyBVLiobdrNnyJT7zMN1HyLYa7bU52owuik")
+client = genai.Client(api_key="private_key")
 
 
 def trend_detection(tag_name, number_of_pages, posts=None):
